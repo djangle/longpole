@@ -13,7 +13,7 @@ export default function Users({ pageTitle, isConnected, users }) {
 
       <main>
         <h1>{pageTitle}</h1>
-        
+
         <br></br>
         <table className="table-auto text-left shadow-lg bg-white">
           <thead>
@@ -49,6 +49,22 @@ export default function Users({ pageTitle, isConnected, users }) {
             for instructions.
           </h2>
         )}
+
+        <div class="footer">
+          <div class="hwrap">
+            <div class="hmove">
+              <div class="hitem">INTERNAL USE ONLY</div>
+              <div class="hitem">
+                Warning: Settings have not been defined. Click here to...
+              </div>
+              <div class="hitem">Remember: This is a work in progress...</div>
+              <div class="hitem">
+                Email acamodio@gmail.com if you have an idea for a name for this
+                app.
+              </div>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
   );
@@ -69,7 +85,11 @@ export async function getServerSideProps(context) {
     users = JSON.parse(JSON.stringify(users));
 
     return {
-      props: { pageTitle: "longpole://pages/index.js", isConnected: true, users },
+      props: {
+        pageTitle: "longpole://pages/index.js",
+        isConnected: true,
+        users,
+      },
     };
   } catch (e) {
     console.error(e);
