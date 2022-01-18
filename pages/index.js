@@ -1,4 +1,7 @@
 //pages/index.js
+//TODO: Implement iron-session or uninstall it
+//TODO: Implement GridFS for file storage
+//TODO: Use schema.org and JSON-LD standards to improve SEO
 
 import Head from "next/head";
 import clientPromise from "../lib/mongodb";
@@ -59,8 +62,7 @@ export default function Users({ pageTitle, isConnected, users }) {
               </div>
               <div class="hitem">Remember: This is a work in progress...</div>
               <div class="hitem">
-                Email acamodio@gmail.com if you have an idea for a name for this
-                app.
+                Email acamodio@gmail.com for more information...
               </div>
             </div>
           </div>
