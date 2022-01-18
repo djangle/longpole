@@ -1,0 +1,25 @@
+{
+  "name": "longpole-app",
+  "version": "0.01",
+  "author": "Adam Amodio <acamodio@gmail.com> (http://longpole.app)",
+  "git": "https://github.com/djangle/Longpole.git",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "mongodb": "^4.1.3",
+    "next": "latest",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "jest": "^27.4.7",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.15"
+  }
+}
