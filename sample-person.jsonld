@@ -1,0 +1,37 @@
+{
+    "@context": "https://longpole.app",
+    "@type": "Person",
+    "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Seattle",
+    "addressRegion": "WA",
+    "postalCode": "98052",
+    "streetAddress": "20341 Whitworth Institute 405 N. Whitworth"
+    },
+    "colleague": [
+    "http://www.xyz.edu/students/alicejones.html",
+    "http://www.xyz.edu/students/bobsmith.html"
+    ],
+    "affiliation": [
+        "ACME Corp",
+        "Main Street Holdings"
+    ],
+    "worksFor": "VanDelay Enterprises",
+    "email": "mailto:yusuf-islam@xyz.edu",
+    "image": "yislam.jpg",
+    "jobTitle": "Professor",
+    "name": "Yusuf Islam",
+    "additionalName": "Cat Stevens",
+    "telephone": "(425) 123-4567",
+    "url": "http://www.longpole.app/yislam"
+}
+
+
+<div itemscope itemtype ="https://schema.org/Movie">
+  <h1 itemprop="name">Avatar</h1>
+  <div itemprop="director" itemscope itemtype="https://schema.org/Person">
+  Director: <span itemprop="name">James Cameron</span> (born <span itemprop="birthDate">August 16, 1954</span>)
+  </div>
+  <span itemprop="genre">Science fiction</span>
+  <a href="../movies/avatar-theatrical-trailer.html" itemprop="trailer">Trailer</a>
+</div>
