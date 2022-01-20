@@ -1,7 +1,33 @@
 //pages/index.js
-//TODO: Implement iron-session or uninstall it
-//TODO: Implement GridFS for file storage
-//TODO: Use schema.org and JSON-LD standards to improve SEO
+
+// TODO:
+// Implement iron-session or uninstall it
+// Implement GridFS for file storage
+// Use schema.org and JSON-LD standards to improve SEO
+// Implement a persistent/module layout
+// Implment tooltips
+// Build nav menus
+// 1) App
+// 1a) Profile
+// 1b) Settings
+// 2) Database
+// 2a) Reports
+// 3) Collection
+// 3a) Create (auto/en mass)
+// 3b) Read
+// 3c) Update (auto/en mass)
+// 3d) Delete (auto/clean up)
+// Implment auth0 or something for login
+// Add user profiles
+// Build out collection data
+// Deploy for public testing
+// Build out settings page
+// Implment search
+// Play with SVGs
+// Add export, PDF, connect to visualizers features
+// Add legal page
+// Add data templates
+//
 
 import Head from "next/head";
 import clientPromise from "../lib/mongodb";
@@ -21,6 +47,7 @@ export default function Users({
 
       <main>
         <h1 className="text-3xl font-bold text-indigo-900">longpole</h1>
+        <span className="text-gray-100">version 0.01</span>
 
         <nav class="flex" aria-label="Breadcrumb">
           <ol class="inline-flex items-center space-x-1 md:space-x-3">
@@ -216,57 +243,26 @@ export default function Users({
             </div>
           </div>
         )}
-
-        <br></br>
-        <br></br>
-        <br></br>
-        <p className="text-2xl">Milestones</p>
-        <br></br>
-        <ol className="relative border-l border-gray-200 dark:border-gray-700">
-          <li className="mb-10 ml-4">
-            <div className="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-            <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-              January 2022
-            </time>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-              Next.js & MongoDB
-            </h3>
-            <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-              Data from the DB is being displayed!
-            </p>
-          </li>
-          <li className="ml-4">
-            <div className="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-            <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-              December 2021
-            </time>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-              Git-ty up!
-            </h3>
-            <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-              First commit made, and deleted as I learned how not to use git.
-            </p>
-          </li>
-        </ol>
       </main>
 
       <footer>
         <br></br>
-        <br></br>
-        <br></br>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="w-6 h-6 text-gray-400"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M5 5a3 3 0 015-2.236A3 3 0 0114.83 6H16a2 2 0 110 4h-5V9a1 1 0 10-2 0v1H4a2 2 0 110-4h1.17C5.06 5.687 5 5.35 5 5zm4 1V5a1 1 0 10-1 1h1zm3 0a1 1 0 10-1-1v1h1z"
-            clip-rule="evenodd"
-          />
-          <path d="M9 11H3v5a2 2 0 002 2h4v-7zM11 18h4a2 2 0 002-2v-5h-6v7z" />
-        </svg>
+        <div>
+          <a href="legal">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4 text-gray-200"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1zm-5 8.274l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L5 10.274zm10 0l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L15 10.274z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+        </div>
       </footer>
     </div>
   );
