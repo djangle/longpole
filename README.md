@@ -9,7 +9,11 @@
 * It's (almost) all been done before. Favor best practices over reinventing the wheel.
 
 * Don't sweat the small stuff. Focus on what matters.
+
+* Needs. Never nice to haves.
+
+* Protect the user from themselves.
 <br />
 <br />
-## Excelsior !
+## Excelsior!
 This project is currently a solo mission. If you are interested in jumping aboard, [click here](mailto:acamodio@gmail.com). 
