@@ -13,7 +13,3 @@
 * Needs. Never nice to haves.
 
 * Protect the user from themselves.
-<br />
-<br />
-## Excelsior!
-This project is currently a solo mission. If you are interested in jumping aboard, [click here](mailto:acamodio@gmail.com). 

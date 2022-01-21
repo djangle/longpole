@@ -27,6 +27,7 @@
 // Add export, PDF, connect to visualizers features
 // Add legal page
 // Add data templates
+// Fix className defaults per tailwindcss init
 //
 
 import Head from "next/head";
@@ -41,7 +42,7 @@ export default function Users({
   return (
     <div className="container px-12 py-8 select-none">
       <Head>
-        <title>Longpole</title>
+        <title>longpole</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
