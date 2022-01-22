@@ -16,7 +16,7 @@
 }*/
 
 
-function initUser() {
+function createUser() {
   const showTooltips = true;
   const readOnly = false;
   const showProfileWarning = true;

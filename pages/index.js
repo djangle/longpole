@@ -1,7 +1,7 @@
 //pages/index.js
 
 // TODO:
-// Implement iron-session or uninstall it
+// Implement iron-session or auth0 for login
 // Implement GridFS for file storage
 // Use schema.org and JSON-LD standards to improve SEO
 // Implement a persistent/module layout
@@ -17,17 +17,16 @@
 // 3b) Read
 // 3c) Update (auto/en mass)
 // 3d) Delete (auto/clean up)
-// Implment auth0 or something for login
 // Add user profiles
 // Build out collection data
 // Deploy for public testing
 // Build out settings page
-// Implment search
+// Implement search
 // Play with SVGs
 // Add export, PDF, connect to visualizers features
 // Add legal page
 // Add data templates
-// Fix className defaults per tailwindcss init
+// Fix css per tailwindcss init
 //
 
 import Head from "next/head";
@@ -43,28 +42,32 @@ export default function Users({
     <div className="container px-12 py-8 select-none">
       <Head>
         <title>longpole</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/images/favicon.ico" />
       </Head>
 
       <main>
-        <h1 className="text-3xl font-bold text-indigo-900">longpole</h1>
-        <span className="text-gray-100">version 0.01</span>
-
-        <nav class="flex" aria-label="Breadcrumb">
-          <ol class="inline-flex items-center space-x-1 md:space-x-3">
-            <li class="inline-flex items-center">
+        <h1
+          className="text-3xl font-bold text-indigo-900"
+          title="longpole - version 0.01"
+        >
+          longpole
+        </h1>
+        <br></br>
+        <nav className="flex" aria-label="Breadcrumb">
+          <ol className="inline-flex items-center space-x-1 md:space-x-3">
+            <li className="inline-flex items-center">
               <a
                 href="#"
-                class="inline-flex items-center text-sm text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+                className="inline-flex items-center text-sm text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="w-6 h-6 text-gray-400"
+                  className="w-6 h-6 text-gray-400"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M2 5a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm14 1a1 1 0 11-2 0 1 1 0 012 0zM2 13a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2v-2zm14 1a1 1 0 11-2 0 1 1 0 012 0z"
                     clip-rule="evenodd"
                   />
@@ -81,7 +84,7 @@ export default function Users({
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
                     clip-rule="evenodd"
                   ></path>
@@ -92,7 +95,7 @@ export default function Users({
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="w-6 h-6 text-gray-400"
+                    className="w-6 h-6 text-gray-400"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
@@ -113,7 +116,7 @@ export default function Users({
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
                     clip-rule="evenodd"
                   ></path>
@@ -130,7 +133,21 @@ export default function Users({
                       <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z" />
                     </svg>
                     &nbsp;
-                    {currentCollection}
+                    {currentCollection} &nbsp;
+                    <a title="Create" href="/create">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5 text-indigo-200 hover:text-indigo-900"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V8z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </a>
                   </span>
                 ) : (
                   <div>
@@ -145,7 +162,7 @@ export default function Users({
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          fill-rule="evenodd"
+                          fillRule="evenodd"
                           d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
                           clip-rule="evenodd"
                         ></path>
@@ -163,6 +180,45 @@ export default function Users({
           </ol>
         </nav>
         <br></br>
+
+        <div>
+          <br></br>
+          <form class="w-full max-w-lg">
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label
+                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  for="grid-first-name"
+                >
+                  New User by 'username'...
+                </label>
+                <input
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-1 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  id="grid-first-name"
+                  type="text"
+                  placeholder="Username"
+                />
+                <a href="/submit">
+                  <span class="bg-blue-100 text-blue-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-indigo-200 hover:text-indigo-900"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    &nbsp; Submit
+                  </span>
+                </a>
+              </div>
+            </div>
+          </form>
+        </div>
         <br></br>
 
         <table className="shadow-lg bg-white">
@@ -176,7 +232,7 @@ export default function Users({
                   fill="currentColor"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M5 4a3 3 0 00-3 3v6a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H5zm-1 9v-1h5v2H5a1 1 0 01-1-1zm7 1h4a1 1 0 001-1v-1h-5v2zm0-4h5V8h-5v2zM9 8H4v2h5V8z"
                     clip-rule="evenodd"
                   />
@@ -230,44 +286,24 @@ export default function Users({
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
                   clip-rule="evenodd"
                 ></path>
               </svg>
               <div>
-                <span className="">
-                  You are NOT connected to MongoDB. Check the{" "}
-                  <code>README.md</code> for instructions.
-                </span>
+                <span>You are NOT connected to MongoDB.</span>
               </div>
             </div>
           </div>
         )}
       </main>
 
-      <footer>
-        <br></br>
-        <div>
-          <a href="legal">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-4 w-4 text-gray-200"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1zm-5 8.274l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L5 10.274zm10 0l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L15 10.274z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </a>
-        </div>
-      </footer>
+      <footer></footer>
     </div>
   );
 }
+
 
 export async function getServerSideProps(context) {
   try {
@@ -276,6 +312,7 @@ export async function getServerSideProps(context) {
     // const db = client.db("myDatabase");
     // Then you can execute queries against your database like so:
     // db.find({}) or any of the MongoDB Node Driver commands
+
     const client = await clientPromise;
 
     const currentClient = process.env.MONGODB_URI.toString();
