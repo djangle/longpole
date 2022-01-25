@@ -298,8 +298,6 @@ export default function Users({
           </div>
         )}
       </main>
-
-      <footer></footer>
     </div>
   );
 }
